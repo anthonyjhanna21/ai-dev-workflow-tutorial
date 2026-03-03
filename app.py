@@ -35,3 +35,19 @@ df_region = (
 col1, col2 = st.columns(2)
 col1.metric("Total Sales", f"${total_sales:,.0f}")
 col2.metric("Total Orders", f"{total_orders:,}")
+
+# --- Sales Trend Line Chart (US2) ---
+fig_trend = px.line(df_daily, x="date", y="total_amount", title="Sales Trend", labels={"date": "Date", "total_amount": "Sales ($)"})
+st.plotly_chart(fig_trend, use_container_width=True)
+
+# --- Sales by Category Bar Chart (US3) ---
+fig_category = px.bar(df_category, x="category", y="total_amount", title="Sales by Category", labels={"category": "Category", "total_amount": "Sales ($)"}, color="category", color_discrete_sequence=px.colors.qualitative.Safe)
+
+# --- Sales by Region Bar Chart (US4) ---
+fig_region = px.bar(df_region, x="region", y="total_amount", title="Sales by Region", labels={"region": "Region", "total_amount": "Sales ($)"}, color="region", color_discrete_sequence=px.colors.qualitative.Safe)
+
+col1, col2 = st.columns(2)
+with col1:
+    st.plotly_chart(fig_category, use_container_width=True)
+with col2:
+    st.plotly_chart(fig_region, use_container_width=True)

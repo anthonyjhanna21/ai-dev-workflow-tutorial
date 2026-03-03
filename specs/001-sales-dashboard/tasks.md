@@ -71,8 +71,8 @@ Both values match manual calculations from the CSV.
 sales amounts on the Y-axis. Each data point represents one calendar day. Hovering shows the
 exact date and dollar value.
 
-- [ ] T005 [US2] Build trend figure in `app.py`: `fig_trend = px.line(df_daily, x='date', y='total_amount', title='Sales Trend', labels={'date': 'Date', 'total_amount': 'Sales ($)'})`
-- [ ] T006 [US2] Add trend chart to `app.py` layout below KPI cards: `st.plotly_chart(fig_trend, use_container_width=True)`
+- [x] T005 [US2] Build trend figure in `app.py`: `fig_trend = px.line(df_daily, x='date', y='total_amount', title='Sales Trend', labels={'date': 'Date', 'total_amount': 'Sales ($)'})`
+- [x] T006 [US2] Add trend chart to `app.py` layout below KPI cards: `st.plotly_chart(fig_trend, use_container_width=True)`
 
 **Checkpoint**: US2 complete — trend chart visible below KPI cards with interactive tooltips ✅
 
@@ -87,8 +87,8 @@ using a colorblind-safe palette
 sorted from highest to lowest sales. Each bar has a distinct colorblind-safe color. Hovering
 shows the category name and exact sales total.
 
-- [ ] T007 [US3] Build category figure in `app.py`: `fig_category = px.bar(df_category, x='category', y='total_amount', title='Sales by Category', labels={'category': 'Category', 'total_amount': 'Sales ($)'}, color='category', color_discrete_sequence=px.colors.qualitative.Safe)`
-- [ ] T008 [US3] Create two-column layout in `app.py` and add category chart to left column: `col1, col2 = st.columns(2)` then `with col1: st.plotly_chart(fig_category, use_container_width=True)`
+- [x] T007 [US3] Build category figure in `app.py`: `fig_category = px.bar(df_category, x='category', y='total_amount', title='Sales by Category', labels={'category': 'Category', 'total_amount': 'Sales ($)'}, color='category', color_discrete_sequence=px.colors.qualitative.Safe)`
+- [x] T008 [US3] Create two-column layout in `app.py` and add category chart to left column: `col1, col2 = st.columns(2)` then `with col1: st.plotly_chart(fig_category, use_container_width=True)`
 
 **Checkpoint**: US3 complete — category bar chart visible in left column with 5 sorted bars ✅
 
@@ -103,8 +103,8 @@ side by side with the category chart
 category chart. Both charts are visible simultaneously without scrolling. Hovering over
 any bar shows the region name and exact sales total.
 
-- [ ] T009 [P] [US4] Build region figure in `app.py`: `fig_region = px.bar(df_region, x='region', y='total_amount', title='Sales by Region', labels={'region': 'Region', 'total_amount': 'Sales ($)'}, color='region', color_discrete_sequence=px.colors.qualitative.Safe)`
-- [ ] T010 [US4] Add region chart to right column of the existing `st.columns(2)` block in `app.py`: `with col2: st.plotly_chart(fig_region, use_container_width=True)`
+- [x] T009 [P] [US4] Build region figure in `app.py`: `fig_region = px.bar(df_region, x='region', y='total_amount', title='Sales by Region', labels={'region': 'Region', 'total_amount': 'Sales ($)'}, color='region', color_discrete_sequence=px.colors.qualitative.Safe)`
+- [x] T010 [US4] Add region chart to right column of the existing `st.columns(2)` block in `app.py`: `with col2: st.plotly_chart(fig_region, use_container_width=True)`
 
 **Checkpoint**: US4 complete — region bar chart visible in right column alongside category chart ✅
 
