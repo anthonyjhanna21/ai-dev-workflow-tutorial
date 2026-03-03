@@ -57,7 +57,7 @@ are computed here and used by US1–US4.
 showing a dollar-formatted value (~$678,450) and "Total Orders" showing an integer count (482).
 Both values match manual calculations from the CSV.
 
-- [ ] T004 [US1] Render KPI cards in `app.py`: create `col1, col2 = st.columns(2)`, then `col1.metric("Total Sales", f"${total_sales:,.0f}")` and `col2.metric("Total Orders", f"{total_orders:,}")`
+- [x] T004 [US1] Render KPI cards in `app.py`: create `col1, col2 = st.columns(2)`, then `col1.metric("Total Sales", f"${total_sales:,.0f}")` and `col2.metric("Total Orders", f"{total_orders:,}")`
 
 **Checkpoint**: US1 complete — `streamlit run app.py` shows two correctly formatted metric cards ✅
 

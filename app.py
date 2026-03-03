@@ -30,3 +30,8 @@ df_region = (
     .reset_index()
     .sort_values("total_amount", ascending=False)
 )
+
+# --- KPI Cards (US1) ---
+col1, col2 = st.columns(2)
+col1.metric("Total Sales", f"${total_sales:,.0f}")
+col2.metric("Total Orders", f"{total_orders:,}")
